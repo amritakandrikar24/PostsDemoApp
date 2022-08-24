@@ -35,22 +35,33 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MS6-OH-2UP">
                                 <rect key="frame" x="153.5" y="459.5" width="107" height="31"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="107" id="IRV-Nm-RBU"/>
                                     <constraint firstAttribute="height" constant="31" id="iWS-XE-5ga"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Got To Posts"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Posts">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="gotoPost:" destination="9Oc-kS-kQi" eventType="touchUpInside" id="uOc-Jk-Aqn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here to see posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1t-KA-W8w">
+                                <rect key="frame" x="120.5" y="424.5" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qTG-Y6-9dh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MS6-OH-2UP" firstAttribute="centerY" secondItem="qTG-Y6-9dh" secondAttribute="centerY" id="Bla-Ft-eWo"/>
                             <constraint firstItem="MS6-OH-2UP" firstAttribute="centerX" secondItem="qTG-Y6-9dh" secondAttribute="centerX" id="Gb3-HX-kFa"/>
+                            <constraint firstItem="a1t-KA-W8w" firstAttribute="centerX" secondItem="MS6-OH-2UP" secondAttribute="centerX" id="I2U-Mb-WdS"/>
+                            <constraint firstItem="MS6-OH-2UP" firstAttribute="top" secondItem="a1t-KA-W8w" secondAttribute="bottom" constant="14" id="VF5-rd-hZ9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="llh-2Q-ghX"/>
@@ -147,6 +158,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
